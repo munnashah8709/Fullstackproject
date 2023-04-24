@@ -10,7 +10,9 @@ app.use(cors());
 app.use(express.urlencoded({ extended: false }));
 require("../Backend/Components/Connection/Connect")
 const oppsenginedata=require("../Backend/Components/Model/Registration");
+const recipe=require("../Backend/Components/Model/Addrecipe");
 const secret="mynameismunnashahiamwithrahul";
+
 
 
 
@@ -42,7 +44,6 @@ app.post("/signup", async (req, res) => {
 
 
 app.post('/login',(req,res)=>{
-  
     const email=req.body.email;
     const passwords=req.body.password;
     if (!email || !passwords ) {
@@ -67,6 +68,38 @@ bcrypt.compare(passwords,savedUser.password)
 
 }))
 })
+
+
+app.post('/addrecipe', (req, res)=>{
+  const data = new recipe({
+    RecipeTitel: req.body.RecipeTitel,
+    Author: req.body.Author,
+    imgurl: req.body.imgurl,
+    ingredients: req.body.ingredients,
+    directions: req.body.directions,
+    price:req.body.price
+
+   
+  }); 
+  const senddata =data.save().then(() => {res.send("successfull");}).catch((err) => {
+    console.log(err);
+   });
+})
+
+
+
+app.get('/getrecipe', async(req,res)=>{
+  try {
+      const data = await recipe.find() 
+      res.status(200).json({
+          data
+      })
+  } catch (error) {
+      res.status(400).send('Error in fetch proposals')
+  }
+})
+
+
 
 
 
