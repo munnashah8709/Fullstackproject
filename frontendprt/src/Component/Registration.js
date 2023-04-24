@@ -35,10 +35,10 @@ const handelsubmit=(e)=>{
           alert(data.error);
         } else {
         alert(data.data);
-
         if(data.data=="successfull"){
                navigate("/")
         }
+        
         }
       })
       .catch((error) => {

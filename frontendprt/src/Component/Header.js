@@ -14,9 +14,9 @@ function Header() {
         <h4 className="aaa">RECIPE APP</h4>
         </span>
         </div> 
-        <div>
+        {/* <div>
         <h4 className="aaaa">LogOut</h4>
-        </div>
+        </div> */}
       </div>
     </nav>
     </div>

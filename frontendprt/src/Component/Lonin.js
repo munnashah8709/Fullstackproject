@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 const Lonin = (e) => {
+
+  const navigate=useNavigate()
   const [inputdata, setinputdata]=useState({})
   const handelinput=(e)=>{
      const Name=e.target.name;
@@ -29,18 +31,19 @@ formdata1.append("password", inputdata.password);
       });
       const datas = await response.json();
 
+      console.log(datas)
+
       if (datas.token) {
         localStorage.setItem("jwt", datas.token);
         localStorage.setItem("User", JSON.stringify(datas.user));
       }
 
-
-
       if(datas.error==="inValid email or password"){
         alert("invalid attempt")
       }
-      if(datas.message==="success"){
+      if(datas.user.message==="success"){
         alert("success")
+        navigate("/CreateRecipi")
       }
 
 
@@ -49,7 +52,7 @@ formdata1.append("password", inputdata.password);
 
   }
 
-const navigate=useNavigate()
+
 const Movetoregister=()=>{
      navigate("/register")
 }

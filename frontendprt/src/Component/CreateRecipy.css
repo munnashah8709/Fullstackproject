@@ -1,0 +1,102 @@
+.height{
+    height: 10vh;
+    margin-top: 100px;
+}
+.heights{
+
+    margin-left: 350px;
+}
+
+.form{
+    position: relative;
+}
+
+.form .fa-search{
+    position: absolute;
+    top:20px;
+    left: 20px;
+    color: #9ca3af;
+
+}
+
+.form span{
+    position: absolute;
+    right: 17px;
+    top: 13px;
+    padding: 2px;
+    border-left: 1px solid #d1d5db;
+
+}
+
+.left-pan{
+    padding-left: 7px;
+}
+
+.left-pan i{
+   padding-left: 10px;
+}
+
+.form-input{
+    height: 55px;
+    text-indent: 33px;
+    border-radius: 10px;
+}
+
+.form-input:focus{
+    box-shadow: none;
+    border:none;
+}
+
+
+.recipiedat {
+    width: 80%;
+    margin-left: 10%;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(150px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(150px, 1fr));
+  }
+  
+  #user-name {
+    font-weight: 600;
+    color: skyblue;
+    margin-right: 5px;
+    margin-top: 10px;
+  }
+  
+  .cardss {
+    width: 12rem;
+  }
+  
+  #proposals-title {
+    font-size: 25px;
+    font-weight: 600;
+    color: black;
+    margin-left: 170px;
+    margin-top: 20px;
+    text-decoration: underline;
+  }
+  
+  .cards-body {
+    border: 1px solid #cccccc;
+    height: 125px;
+    height: auto;
+  }
+  
+  .cards-title {
+    margin-top: 0px;
+  }
+  
+  @media (max-width: 1180px) {
+    .recipiedat {
+      margin-left: 100px;
+      grid-template-columns:repeat(auto-fit, minmax(150px,1fr));
+    }
+  
+  }
+  
+  .cards-body {
+    font-weight: 700;
+    text-align: justify;
+    padding: 5px;
+
+  }
