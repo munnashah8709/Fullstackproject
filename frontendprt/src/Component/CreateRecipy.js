@@ -95,6 +95,7 @@ function CreateRecipy() {
           <div className="cardss" key={key} style={{marginLeft:"30px", marginTop:"20px"}} onClick={() =>sendtocart(allval)} >
           <img src={allval.imgurl} className="card-img-top" alt=""  style={{height:"180px",width:"192px"}} />
           <div className="cards-body">
+            <p className="price">{allval.Author}</p>
             <p className="price">{allval.price}</p>
           </div>
         </div>

@@ -7,7 +7,6 @@ import { useNavigate } from 'react-router-dom';
 function Addrecipy() {
 
     const navigate=useNavigate()
-
     const [inputsdata, setinputdata]=useState({})
     const handelinput=(e)=>{
         const inputvalue=e.target.value;
@@ -40,7 +39,6 @@ function Addrecipy() {
             if(data.data==="successfull"){
                    navigate("/CreateRecipi")
             }
-            
             }
           })
           .catch((error) => {
@@ -68,15 +66,10 @@ function Addrecipy() {
     </nav>
  </div>
     
-
-
-
     <div className="container" style={{marginTop:"80px", width:"50%"}}>
         <h2 style={{marginLeft:"35%", color:"blue"}}>Create a recipe </h2>
         <hr></hr>
         <h4>Share a recipe with the club by compleating the below form</h4>
-
-
 
   <div className="form-outline mb-4">
   <label className="form-label" >Author</label>
@@ -112,6 +105,8 @@ function Addrecipy() {
 
   <button type="submit" className="btn btn-primary btn-block mb-4" style={{marginLeft:"45%"}} onClick={handelsubmits} >Send</button>
  </div>
+
+
 </div>
   )
 }
