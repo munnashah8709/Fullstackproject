@@ -63,33 +63,37 @@ const handelsubmit=(e)=>{
                 <p className="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Sign up</p>
                   <div className="d-flex flex-row align-items-center mb-4">
                     <i className="fas fa-user fa-lg me-3 fa-fw"></i>
-                    <div className="form-outline flex-fill mb-0">
-                      <input type="text" id="form3Example1c" onChange={handelinput} name='username' autoComplete='off' className="form-control" />
-                      <label className="form-label" >Your Name</label>
+                    <div className="flex-fill mb-0">
+                    <label className="" >Your Name</label>
+                      <input type="text" id="" onChange={handelinput} name='username' autoComplete='off' className="form-control" />
+                     
                     </div>
                   </div>
 
                   <div className="d-flex flex-row align-items-center mb-4">
                     <i className="fas fa-envelope fa-lg me-3 fa-fw"></i>
-                    <div className="form-outline flex-fill mb-0">
-                      <input type="text" id="form3Example3c" onChange={handelinput} name='email' autoComplete='off' className="form-control" />
-                      <label className="form-label" >Your Email</label>
+                    <div className=" flex-fill mb-0">
+                    <label className="" >Your Email</label>
+                      <input type="text" id="" onChange={handelinput} name='email' autoComplete='off' className="form-control" />
+                   
                     </div>
                   </div>
 
                   <div className="d-flex flex-row align-items-center mb-4">
                     <i className="fas fa-lock fa-lg me-3 fa-fw"></i>
-                    <div className="form-outline flex-fill mb-0">
-                      <input type="password" id="form3Example4c" onChange={handelinput} name='password' autoComplete='off' className="form-control" />
-                      <label className="form-label"  >Password</label>
+                    <div className=" flex-fill mb-0">
+                    <label className=""  >Password</label>
+                      <input type="password" id="" onChange={handelinput} name='password' autoComplete='off' className="form-control" />
+                     
                     </div>
                   </div>
 
                   <div className="d-flex flex-row align-items-center mb-4">
                     <i className="fas fa-key fa-lg me-3 fa-fw"></i>
-                    <div className="form-outline flex-fill mb-0">
-                      <input type="password" id="form3Example4cd" onChange={handelinput} name='ConformPass' className="form-control" />
-                      <label className="form-label" >Repeat your password</label>
+                    <div className="flex-fill mb-0">
+                    <label className="" >Repeat your password</label>
+                      <input type="password" id="" onChange={handelinput} name='ConformPass' className="form-control" />
+                      
                     </div>
                   </div>
 

@@ -66,44 +66,44 @@ function Addrecipy() {
     </nav>
  </div>
     
-    <div className="container" style={{marginTop:"80px", width:"50%"}}>
+    <div className="container" style={{marginTop:"80px", width:"50%", border:"2px solid"}}>
         <h2 style={{marginLeft:"35%", color:"blue"}}>Create a recipe </h2>
         <hr></hr>
         <h4>Share a recipe with the club by compleating the below form</h4>
 
-  <div className="form-outline mb-4">
+  <div className=" mb-4">
   <label className="form-label" >Author</label>
     <input type="text" id="form4Example1" onChange={handelinput} name='Author' className="form-control" />
   </div>
 
-  <div className="form-outline mb-4">
+  <div className=" mb-4">
   <label className="form-label" >Recipe titel</label>
     <input type="text" id="form4Example1" onChange={handelinput} name='RecipeTitel' className="form-control" />
   </div>
 
-  <div className="form-outline mb-4">
+  <div className=" mb-4">
   <label className="form-label" >Price</label>
     <input type="number" id="form4Example1" onChange={handelprice} name='price' className="form-control" />
   </div>
   
-  <div className="form-outline mb-4">
+  <div className=" mb-4">
   <label className="form-label" >Image Address URL</label>
     <input type="text" id="form4Example1" onChange={handelinput} name='imgurl' className="form-control" />
   </div>
 
  
-  <div className="form-outline mb-4">
+  <div className=" mb-4">
   <label className="form-label" >Ingredients</label>
     <textarea className="form-control" id="form4Example3" name='ingredients' onChange={handelinput} rows="4"></textarea>
   </div>
 
-  <div className="form-outline mb-4">
+  <div className=" mb-4">
   <label className="form-label" >Recipe Direction</label>
     <textarea className="form-control" id="form4Example3" name='directions' onChange={handelinput} rows="4"></textarea>
   </div>
 
 
-  <button type="submit" className="btn btn-primary btn-block mb-4" style={{marginLeft:"45%"}} onClick={handelsubmits} >Send</button>
+  <button type="submit" className="btn btn-primary btn-block mb-4" style={{marginLeft:"45%",width:"100px"}} onClick={handelsubmits} >Send</button>
  </div>
 
 

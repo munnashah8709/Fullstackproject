@@ -9,16 +9,23 @@ const RecipeDetails = () => {
     const [getdetails, setgetdetails]=useState();
     let localdata=location.state
 
+
+    let [array, setarray]=useState("")
+
     useEffect(()=>{
       setgetdetails(localdata)
     },[])
  
     const DeleteDetails=(data)=>{
      for(let i=0;i<getdetails.length;i++){
-      const index = getdetails.findIndex((item) => item._id === data);
+      const index = getdetails.findIndex((item) =>item._id === data);
       const newItems = [...getdetails];
       newItems.splice(index, 1);
       setgetdetails(newItems);
+     }
+
+     if(AfterDetails._id===data){
+      setAfterDetails([])
      }
      
     }
@@ -26,7 +33,7 @@ const RecipeDetails = () => {
     const [AfterDetails, setAfterDetails]=useState([])
     const SendDetails=(data)=>{
           setAfterDetails(data)
-          console.log(AfterDetails)
+          console.log(AfterDetails._id)
     }
     
 
@@ -69,7 +76,8 @@ const RecipeDetails = () => {
       </div>
 
 
-      <div class="container">
+{
+  AfterDetails.Author && <div class="container">
   <div class="row">
     <div class="col">
     <img src={AfterDetails.imgurl} className="card-img-top" alt=""  style={{height:"400px"}}  />
@@ -102,24 +110,8 @@ const RecipeDetails = () => {
     </div>
   </div>
 </div>
-
-
-
-      
-
-
-
-     
-     
-
-
-
-
-
-
-
-
-
+}
+  
     </div>
   )
 }

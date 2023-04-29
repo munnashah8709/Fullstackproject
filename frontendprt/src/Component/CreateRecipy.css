@@ -105,3 +105,14 @@
     color: var(--bs-nav-pills-link-active-color);
     background-color: #242a33;
 }
+
+.form-outline .form-control {
+  min-height: auto;
+  padding: 0.32rem 0.75rem;
+  border: 2;
+  background: transparent;
+  transition: all .2s linear;
+}
+.mb-4 {
+  margin-bottom: 1rem!important;
+}

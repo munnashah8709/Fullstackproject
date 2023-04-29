@@ -9,6 +9,9 @@ import axios from "axios";
 function CreateRecipy() {
     const [getdata, setgetdata]=useState([])
 
+    const [searchData, setsearchData]=useState("")
+    
+
     const navigate=useNavigate();
     const tocreatrecipy=()=>{
         navigate("/Addrecipy")
@@ -38,6 +41,13 @@ function CreateRecipy() {
     }
 
     
+    const Logout=()=>{
+      console.log("munna shah")
+      localStorage.removeItem('jwt')
+      navigate("/")
+    }
+
+    
    
   return (
     <div>
@@ -57,7 +67,7 @@ function CreateRecipy() {
         <span style={{color:"white"}}>{addTocart.length}</span>
         </div>
       <div>
-      <h4 className="aaaa">LogOut</h4>
+      <h4 className="aaaa" onClick={Logout} >LogOut</h4>
      </div>
 
 
@@ -70,7 +80,7 @@ function CreateRecipy() {
   <div className="col-md-6">
    <div className="form">
       <BsSearch className='fa fa-search' />
-      <input type="text" className="form-control form-input" placeholder="Search anything..." />
+      <input type="text" className="form-control form-input"  placeholder="Search anything..." onChange={(e)=>setsearchData(e.target.value)} />
       <span className="left-pan"></span>
     </div> 
   </div>
@@ -90,12 +100,12 @@ function CreateRecipy() {
  <p id="proposals-title"> All Recipies</p>
       <div className="recipiedat" style={{padding:"20px"}} >
      {
-      getdata.map((allval, key)=>{
+      getdata.filter((allval) =>allval.RecipeTitel.toLowerCase().includes(searchData.toLowerCase())).map((allval, key)=>{
          return (
           <div className="cardss" key={key} style={{marginLeft:"30px", marginTop:"20px"}} onClick={() =>sendtocart(allval)} >
           <img src={allval.imgurl} className="card-img-top" alt=""  style={{height:"180px",width:"192px"}} />
           <div className="cards-body">
-            <p className="price">{allval.Author}</p>
+            <p className="price">{allval.RecipeTitel}</p>
             <p className="price">{allval.price}</p>
           </div>
         </div>
@@ -103,10 +113,6 @@ function CreateRecipy() {
       })
      }
      </div>
-
-
-
-
 
 
 
