@@ -93,7 +93,7 @@ function CreateRecipy() {
  <p id="proposals-title"> All Recipies</p>
       <div className="recipiedat" style={{padding:"20px"}} >
      {
-      getdata.filter((item) =>item.RecipeTitel?.toLowerCase().includes(searchData.toLowerCase())).map((allval, key)=>{
+      getdata.filter((allval) =>allval.RecipeTitel?.toLowerCase().includes(searchData.toLowerCase())).map((allval, key)=>{
          return (
           <div className="cardss" key={key} style={{marginLeft:"30px", marginTop:"20px"}} onClick={() =>sendtocart(allval)} >
           <img src={allval.imgurl} className="card-img-top" alt=""  style={{height:"180px",width:"192px"}} />
