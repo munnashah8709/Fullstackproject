@@ -116,3 +116,45 @@
 .mb-4 {
   margin-bottom: 1rem!important;
 }
+
+
+.container{  
+  text-align: center;   
+  padding-top: 100px;  
+  }  
+
+  #btn{  
+  font-size: 25px;  
+  }  
+
+
+
+.Model-Wrapper{
+position: fixed;
+left: 0;
+right: 0;
+bottom: 0;
+top: 0;
+background-color: #9ca3af;
+  }
+
+  .Model-cointainer{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  max-width: 30rem;
+  transform: translate(-50%,-50%);
+  background-color: aliceblue;
+  }
+
+  .Paybtn{
+    height: 40px;
+    width: 137px;
+    /* margin: auto; */
+    align-content: center;
+    margin-left: 33%;
+    margin-bottom: 8px;
+    background-color: blue;
+    color: white;
+    border-radius: 8px;
+  }

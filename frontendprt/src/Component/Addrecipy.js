@@ -24,8 +24,6 @@ function Addrecipy() {
     const handelsubmits=(e)=>{
         e.preventDefault();
 
-        console.log(inputsdata)
-        
         axios.post("http://localhost:8000/addrecipe", inputsdata, {
             method: "POST",
             headers: { "Content-Type": "application/json" },

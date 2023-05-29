@@ -2,15 +2,13 @@ import React, { useEffect, useState } from 'react'
 import { useLocation } from 'react-router-dom';
 import logo from "../Image/Foodlogo.webp";
 import { MdDelete } from 'react-icons/md';
+import Modal from '../Component/Modal';
 
 const RecipeDetails = () => {
 
     let location = useLocation();
     const [getdetails, setgetdetails]=useState();
     let localdata=location.state
-
-
-    let [array, setarray]=useState("")
 
     useEffect(()=>{
       setgetdetails(localdata)
@@ -33,11 +31,18 @@ const RecipeDetails = () => {
     const [AfterDetails, setAfterDetails]=useState([])
     const SendDetails=(data)=>{
           setAfterDetails(data)
-          console.log(AfterDetails._id)
     }
     
+    const [showPopUp, setshowPopUp]=useState(false)
+
+   const handelPopup=()=>{
+    setshowPopUp(true)
+   }
 
 
+   const closeModel=()=>{setshowPopUp(false)}
+
+   
   return (
     <div>
        <div id="header-part">
@@ -77,18 +82,18 @@ const RecipeDetails = () => {
 
 
 {
-  AfterDetails.Author && <div class="container">
-  <div class="row">
-    <div class="col">
+  AfterDetails.Author && <div className="container">
+  <div className="row">
+    <div className="col">
     <img src={AfterDetails.imgurl} className="card-img-top" alt=""  style={{height:"400px"}}  />
     </div>
-    <div class="col">
+    <div className="col">
      
   <div >
   <ul className="nav nav-pills nav-justified mb-3" id="ex1" role="tablist">
     <li className="nav-item" role="presentation">
       <a className="nav-link active" id="tab-login" data-mdb-toggle="pill" href="#pills-login" role="tab"
-        aria-controls="pills-login" aria-selected="true"  >Ingredients</a>
+        aria-controls="pills-login" aria-selected="true">Ingredients</a>
     </li>
     <li className="nav-item" role="presentation">
       <a className="nav-link" id="tab-register" data-mdb-toggle="pill" href="#pills-register" role="tab"
@@ -106,13 +111,21 @@ const RecipeDetails = () => {
     </div>
   </div>
   </div>  
-
     </div>
   </div>
 </div>
 }
-  
-    </div>
+
+<div className="container">  
+<button type="button" className="btn btn-danger" id="btn" onClick={handelPopup}>OrderNow</button>
+</div>
+
+  {
+    showPopUp && <Modal closeModel={closeModel} itemdetails={getdetails} />
+  }
+
+
+  </div>
   )
 }
 
