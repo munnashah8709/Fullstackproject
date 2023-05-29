@@ -47,7 +47,7 @@ function Modal({ closeModel, itemdetails }) {
     return () => {
       document.body.style.overflowY = "scroll";
     };
-  },[]);
+  },[itemdetails]);
 
   return (
     <>
