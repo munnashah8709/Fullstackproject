@@ -66,7 +66,7 @@ function Modal({ closeModel, itemdetails }) {
                     <div className="col-sm">
                       <h3>{item.RecipeTitel}</h3>
                     </div>
-                    <div className="col-sm">--------</div>
+                    <div className="col-sm" style={{width:"200px"}} >--------</div>
                     <div className="col-sm">
                       <h4 style={{ color: "red" }}>{item.price}</h4>
                     </div>
@@ -81,7 +81,7 @@ function Modal({ closeModel, itemdetails }) {
               <div className="col-sm">
                 <h2>Total:</h2>
               </div>
-              <div className="col-sm">--------</div>
+              <div className="col-sm" style={{width:"200px"}} >--------</div>
               <div className="col-sm">
                 <h4 style={{ color: "red" }}>{TotalPrice}</h4>
               </div>

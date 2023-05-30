@@ -65,43 +65,57 @@ function Addrecipy() {
  </div>
     
     <div className="container" style={{marginTop:"80px", width:"50%", border:"2px solid"}}>
-        <h2 style={{marginLeft:"35%", color:"blue"}}>Create a recipe </h2>
+        <h2 style={{marginLeft:"12%", color:"blue"}}>Create a recipe </h2>
         <hr></hr>
         <h4>Share a recipe with the club by compleating the below form</h4>
 
-  <div className=" mb-4">
-  <label className="form-label" >Author</label>
-    <input type="text" id="form4Example1" onChange={handelinput} name='Author' className="form-control" />
+
+    <div class="form-group row" style={{marginTop:"2px"}}>
+    <label for="inputEmail3" class="col-sm-2 col-form-label">Author</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="inputEmail3" onChange={handelinput} name='Author' />
+    </div>
   </div>
 
-  <div className=" mb-4">
-  <label className="form-label" >Recipe titel</label>
-    <input type="text" id="form4Example1" onChange={handelinput} name='RecipeTitel' className="form-control" />
+    <div class="form-group row" style={{marginTop:"8px"}}>
+    <label for="inputEmail3" class="col-sm-2 col-form-label">Recipe titel</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="inputEmail3" onChange={handelinput} name='RecipeTitel' />
+    </div>
+    </div>
+
+
+    <div class="form-group row" style={{marginTop:"8px"}}>
+    <label for="inputEmail3" class="col-sm-2 col-form-label">Price</label>
+    <div class="col-sm-10">
+      <input type="number" class="form-control" id="inputEmail3" onChange={handelprice} name='price' />
+    </div>
   </div>
 
-  <div className=" mb-4">
-  <label className="form-label" >Price</label>
-    <input type="number" id="form4Example1" onChange={handelprice} name='price' className="form-control" />
+    <div class="form-group row" style={{marginTop:"8px"}}>
+    <label for="inputEmail3" class="col-sm-2 col-form-label">Image Address URL</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="inputEmail3"  onChange={handelinput} name='imgurl' />
+    </div>
   </div>
-  
-  <div className=" mb-4">
-  <label className="form-label" >Image Address URL</label>
-    <input type="text" id="form4Example1" onChange={handelinput} name='imgurl' className="form-control" />
-  </div>
-
- 
-  <div className=" mb-4">
-  <label className="form-label" >Ingredients</label>
+   
+<div class="form-group row" style={{marginTop:"8px"}}>
+<label for="inputEmail3" class="col-sm-2 col-form-label">Ingredients</label>
+  <div className="col-sm-10">
     <textarea className="form-control" id="form4Example3" name='ingredients' onChange={handelinput} rows="4"></textarea>
   </div>
-
-  <div className=" mb-4">
-  <label className="form-label" >Recipe Direction</label>
-    <textarea className="form-control" id="form4Example3" name='directions' onChange={handelinput} rows="4"></textarea>
   </div>
 
 
-  <button type="submit" className="btn btn-primary btn-block mb-4" style={{marginLeft:"45%",width:"100px"}} onClick={handelsubmits} >Send</button>
+  <div class="form-group row" style={{marginTop:"8px"}}>
+  <label for="inputEmail3" class="col-sm-2 col-form-label">Recipe Direction</label>
+  <div className="col-sm-10">
+    <textarea className="form-control" id="form4Example3" name='directions' onChange={handelinput} rows="4"></textarea>
+  </div>
+  </div>
+
+
+  <button type="submit" className="btn btn-primary btn-block mb-4" style={{width:"100px",  marginTop:"10px"}} onClick={handelsubmits} >Send</button>
  </div>
 
 

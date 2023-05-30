@@ -56,6 +56,23 @@ function CreateRecipy() {
         </span>
         </div> 
 
+           <div className="col-md-4" >
+           <div className="form">
+             <BsSearch className='fa fa-search' style={{marginTop:"-6px"}} />
+             <input type="text" className="form-control form-input"  placeholder="Search anything..." onChange={(e)=>setsearchData(e.target.value)} style={{height:"40px"}} />
+            <span className="left-pan"></span>
+          </div> 
+          </div>
+
+        
+            <div className="col-md-2">
+            <div className="form">
+            <button type="button" className="btn btn-dark" onClick={tocreatrecipy} >Add Recipy</button>
+          </div>
+          </div>
+
+
+
         <div>
         <BsFillCartPlusFill style={{color:"white"}}onClick={() =>sendDetails(addTocart)} />
         <span style={{color:"white"}}>{addTocart.length}</span>
@@ -69,26 +86,10 @@ function CreateRecipy() {
     </nav>
  </div>
 
-<div className="container">
-<div className="row height justify-content-center align-items-center" style={{margin:"0px, 0px, 0px, 0px"}}>
-  <div className="col-md-6">
-   <div className="form">
-      <BsSearch className='fa fa-search' />
-      <input type="text" className="form-control form-input"  placeholder="Search anything..." onChange={(e)=>setsearchData(e.target.value)} />
-      <span className="left-pan"></span>
-    </div> 
-  </div>
-</div>
- </div>
-<div className="container" >
-<div className="row heights justify-content-center align-items-center">
-  <div className="col-md-6">
-   <div className="form">
-   <button type="button" className="btn btn-dark" onClick={tocreatrecipy} >Add Recipy</button>
-    </div> 
-  </div>
-</div>
- </div>
+
+
+
+
 
  <p id="proposals-title"> All Recipies</p>
       <div className="recipiedat" style={{padding:"20px"}} >
